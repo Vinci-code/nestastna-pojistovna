@@ -1,0 +1,29 @@
+
+<?php if(isset($zprava_info)): ?>
+<h3 class="info"><?= $zprava_info ?></h3>
+<?php endif ?>
+<h2>Registrace</h2>
+<br>
+    <form method="post">
+        
+        <small>prezdivka</small>
+        <input type="text" name="prezdivka">
+        <br>
+        <small>jmeno</small>
+        <input type="text" name="jmeno">
+        <br>
+        <small>prijmeni</small>
+        <input type="text" name="prijmeni">
+        <br>
+        <small>heslo</small>
+        <input type="password" name="heslo">
+        <br>
+        <small>zopakuj heslo</small>
+        <input type="password" name="hesloZnovu">
+        <br>
+        <small>email</small>
+        <input type="email" name="email">
+    <br>
+        
+        <input type="submit" name="registrovat" value="Registruj se">
+    </form>

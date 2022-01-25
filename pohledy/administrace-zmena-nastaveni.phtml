@@ -1,0 +1,38 @@
+<h2>profil uživatele</h2>
+<a class="tlacitko" href="uvod-administrace/vypis-uzivatelu">zpět</a>
+
+<?php if($parametr === 'upravit'): ?>
+<form  method="post">
+    <span>přezdívka</span>
+    <input type="text" name="prezdivka" value="<?= $prezdivka ?>">
+
+    <span>jméno</span>
+    <input type="text" name="jmeno" value="<?= $jmeno ?>">
+
+    <span>příjmení</span>
+    <input type="text" name="prijmeni" value="<?= $prijmeni ?>">
+
+    <span>email</span>
+    <input type="email" name="email" value="<?= $email ?>">
+
+    <input type="submit" name="upravit" value="upravit">
+</form>
+<?php endif; ?>
+
+<?php if($parametr === 'smazat'): ?>
+<form  method="post">
+    <span><b>přezdívka </b><?= $prezdivka ?></span><br>
+    <input type="hidden"  name="prezdivka" value="<?= $prezdivka ?>">
+
+    <span><b>jméno </b><?= $jmeno ?></span><br>
+    <input type="hidden" name="jmeno" value="<?= $jmeno ?>">
+    
+    <span><b>příjmení </b><?= $prijmeni ?></span><br>
+    <input type="hidden" name="prijmeni" value="<?= $prijmeni ?>">
+    
+    <span><b>email </b><?= $email ?></span><br>
+    <input type="hidden" name="email" value="<?= $email ?>">
+    
+    <input type="submit" name="smazat" value="odstranit uživatele">
+</form>
+<?php endif; ?>

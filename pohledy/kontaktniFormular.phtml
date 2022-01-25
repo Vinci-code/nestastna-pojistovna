@@ -1,0 +1,14 @@
+<h2>Kontaktní formulář</h2>
+
+<form method="post"">
+    Vaše emailová adresa<br />
+    
+    <input type="email" name="email" required="required" value="<?php if (isset($_POST['email'])) echo(htmlspecialchars($_POST['email'])); ?>" /><br />
+    zadejte aktuální rok<br />
+    
+    <input type="text" name="rok" required="required" /><br />
+    
+    <textarea name="zprava"><?php if (isset($_POST['zprava'])) echo(htmlspecialchars($_POST['zprava'])); ?></textarea><br />
+    
+    <input type="submit" value="Odeslat" />
+</form>

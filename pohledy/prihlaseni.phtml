@@ -1,0 +1,18 @@
+<?php if(isset($zprava_info)): ?>
+<h3 class="info"><?= $zprava_info ?></h3>
+<?php endif ?>
+
+    <h2>Přihlášení</h2>    
+    <form method="post">
+
+            <small>přezdívka</small>
+            <input type="text" name="prezdivka">
+        <br>
+            <small>heslo</small>
+            <input type="password" name="heslo">
+        <br>
+            <small>email</small>
+            <input type="email" name="email">
+        <br>
+            <input type="submit" name="prihlasit" value="Přihlásit">
+    </form>

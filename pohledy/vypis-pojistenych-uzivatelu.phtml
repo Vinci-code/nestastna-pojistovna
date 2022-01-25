@@ -1,0 +1,24 @@
+<section class="container">
+    <a class="tlacitko" href="uvod-administrace">zpět</a>    
+    <h2>Výpis všech uživatelů s pojištěním</h2>
+    <br>
+    <?php if(!$vypisPojistenychUzivatelu): ?>
+        <h3>žádné pojištění </h3>
+    <?php endif ?>
+
+    <?php foreach($vypisPojistenychUzivatelu as $uzivatel): ?>
+    <div class="row">
+        
+        <div class="col span-1-of-2 ramecek">
+            <h4><?= $uzivatel['jmeno'] ?></h4>
+            <h4><?= $uzivatel['prijmeni'] ?></h4>
+            <br>
+            <h4>název <?= $uzivatel['nazev_pojisteni'] ?></h4>
+            <br>
+            <h4>měsíční splátka <?= $uzivatel['mesicni_splatka'] ?>kč</h4>
+            <br>
+            <h3><a href="chyba">smazat</a></h3>
+        </div>
+    </div>
+    <?php endforeach ?>
+</section>

@@ -1,0 +1,57 @@
+<h2>profil pojištění</h2>
+<a class="tlacitko" href="uvod-administrace/vypis-pojisteni">zpět</a>
+
+<?php if($parametr === 'upravit'): ?>
+<form  method="post">
+    <span>název pojištění</span>
+    <input type="text" name="nazev_pojisteni" value="<?= $nazev_pojisteni ?>">
+
+    <span>druh pojištěného vozu</span>
+    <input type="text" name="druh_auta" value="<?= $druh_auta ?>">
+
+    <span>cena v kč</span>
+    <input type="text" name="cena_auta" value="<?= $cena_auta ?>">
+
+    <span>délka pojištění</span>
+    <input type="text" name="delka_pojisteni" value="<?= $delka_pojisteni ?>">
+
+    <span>měsíční splátka</span>
+    <input type="text" name="mesicni_splatka" value="<?= $mesicni_splatka ?>">
+
+    <span>datum vytvoření</span>
+    <input type="text" name="datum_vytvoreni" value="<?= $datum_vytvoreni ?>">
+
+    <span>značka a typ vozu</span>
+    <input type="text" name="typ_druh" value="<?= $typ_druh ?>">
+
+
+    <input type="submit" name="upravit" value="upravit pojištění">
+</form>
+<?php endif; ?>
+
+<?php if($parametr === 'smazat'): ?>
+<form  method="post">
+    <span><b>název pojištění </b><?= $nazev_pojisteni ?></span><br>
+    <input type="hidden"  name="nazev_pojisteni" value="<?= $nazev_pojisteni ?>">
+
+    <span><b>druh pojištěného vozu </b><?= $druh_auta ?></span><br>
+    <input type="hidden" name="druh_auta" value="<?= $druh_auta ?>">
+    
+    <span><b>cena v kč </b><?= $cena_auta ?></span><br>
+    <input type="hidden" name="cena_auta" value="<?= $cena_auta ?>">
+    
+    <span><b>délka pojištění </b><?= $delka_pojisteni ?></span><br>
+    <input type="hidden" name="delka_pojisteni" value="<?= $delka_pojisteni ?>">
+
+    <span><b>měsíční splátka </b><?= $mesicni_splatka ?></span><br>
+    <input type="hidden" name="mesicni_splatka" value="<?= $mesicni_splatka ?>">
+
+    <span><b>datum vytvoření </b><?= $datum_vytvoreni ?></span><br>
+    <input type="hidden" name="datum_vytvoreni" value="<?= $datum_vytvoreni ?>">
+
+    <span><b>značka a typ </b><?= $typ_druh ?></span><br>
+    <input type="hidden" name="typ_druh" value="<?= $typ_druh ?>">
+
+    <input type="submit" name="smazat" value="odstranit pojištění">
+</form>
+<?php endif; ?>

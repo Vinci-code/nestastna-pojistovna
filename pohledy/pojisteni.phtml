@@ -1,0 +1,37 @@
+<?php if(isset($zprava_info)): ?>
+<h3 class="info"><?= $zprava_info ?></h3>
+<?php endif ?> 
+<div class="container">
+    <nav class="menu">
+        <ul>
+            <li><a href="nova-pojistna-udalost">Nová pojistná událost</a></li>
+            <li><a href="evidence">pojistné události</a></li>
+            <li><a href="nove-pojisteni">nové pojištění</a></li>
+        </ul>
+    </nav>
+    <br>
+    <h2>Moje pojištění</h2>
+
+    <div class="row">
+        <?php if(!$pojisteni): ?>
+            <h3>žádné záznamy..</h3>
+        <?php endif; ?>
+        <?php foreach ($pojisteni as $vypis) : ?>
+        <div class="col ramecek">
+            <a href='pojisteni/<?= $vypis["nazev_pojisteni"] ?>'>
+                <img class="img" src="../img/<?= $vypis['obrazek'] ?>.png" alt="automobil">    
+                <h2><?= $vypis['nazev_pojisteni'] ?></h2>
+                <hr>
+                <h4>cena pojištěného automobilu: <?= $vypis['cena_auta'] ?>Kč</h4>
+                <h4>druh automobilu: <?= $vypis['druh_auta'] ?></h4>
+                <h4>pojištěno na <?= $vypis['delka_pojisteni'] ?></h4>
+                <br>
+                <h4>splátka <?= $vypis['mesicni_splatka'] ?>Kč měsíčně</h4>
+                <br>
+                <h4>datum vytvoření <?= $vypis['datum_vytvoreni'] ?></h4>
+            </a>
+        </div>
+        <?php endforeach ?>
+    </div>
+    <br>
+</div>

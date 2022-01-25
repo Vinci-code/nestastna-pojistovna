@@ -1,0 +1,19 @@
+<a class="tlacitko" href="pojisteni">zpět</a>
+<div class="container">
+    <h2>evidence pojistných událostí</h2>
+    <?php if(!$seznamPojisteni): ?>
+        <h3>žádné pojistné události</h3>
+    <?php endif ?>
+    <?php foreach ($seznamPojisteni as $pojisteni) : ?>
+        <div class="row">
+                <div class="col span-9-of-12 ramecek">
+                    <h3><?= $pojisteni['ID'] ?></h3>
+                    <h5>typ události: <?= $pojisteni['typ_udalosti'] ?></h5>
+                    <br>
+                    <h3><?= $pojisteni['obsah'] ?></h3>
+                    <br>
+                    <h5>vytvořeno: <?= $pojisteni['datum_vytvoreni'] ?></h5>
+                </div>                        
+        </div><br>
+    <?php endforeach ?>
+</div>

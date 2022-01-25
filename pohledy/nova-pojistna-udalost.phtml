@@ -1,0 +1,25 @@
+<section>
+<a class="tlacitko" href="pojisteni">zpět</a>
+
+<h2>nová pojistná událost</h2>
+<br>
+<form  method="post">
+    <select name="nazev-pojisteni">
+        <?php foreach($nazvyPojisteni as $nazev): ?>
+        <option value="<?= $nazev["nazev_pojisteni"] ?>"><?= $nazev["nazev_pojisteni"] ?></option>
+        <?php endforeach ?>
+    </select>
+    <br>
+    <small>typ události</small>
+    <select name="typ">
+    <option value="odcizeni">odcizení vozu</option>
+    <option value="nehoda">dopravní nehoda</option>
+    </select>
+    <br>
+
+    <small>popis události</small><br>
+    <textarea name="popis" ></textarea>
+
+    <input type="submit" name="odeslat" value="odeslat">
+</form>
+</section>

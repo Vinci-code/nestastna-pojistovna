@@ -1,0 +1,35 @@
+<div class="container">
+<a class="tlacitko" href="uvod-administrace">zpět</a>
+<h2>Výpis všech pojištění</h2>
+<?php if(!$vypisPojisteni): ?>
+        <h3>žádné pojištění </h3>
+    <?php endif ?>
+<?php if(isset($vypisPojisteni)): ?>
+
+    <div class="row" >
+        <div class="col span-1-of-12">ID</div>
+        <div class="col span-2-of-12">uživatele id</div>
+        <div class="col span-1-of-12"><p></p></a></div>
+        <div class="col span-3-of-12">název</div>
+        <div class="col span-2-of-12">vytvořeno</div>
+
+        <div class="col span-1-of-12"></div>
+    </div>
+
+<?php foreach($vypisPojisteni as $pojisteni): ?>
+    <br>
+    <div class="row ramecek">
+        <div class="col span-1-of-12"><a href="vzor/detail"><?= $pojisteni['ID'] ?></a></div>
+        <div class="col span-2-of-12"><?= $pojisteni['uzivatele_id'] ?></div>
+        <div class="col span-1-of-12"><p></p></a></div>
+        <div class="col span-3-of-12"><?= $pojisteni['nazev_pojisteni'] ?></div>
+        <div class="col span-2-of-12"><?= $pojisteni['datum_vytvoreni'] ?></div>
+    </div>
+    <div class="row ramecek">
+        <div class="col span-5-of-12 hneda"><a href="administrace-pojisteni/upravit/<?= $pojisteni['ID'] ?>"><h4>Upravit</h4></a></div>
+        <div class="col span-5-of-12 cervena"><a href="administrace-pojisteni/smazat/<?= $pojisteni['ID'] ?>"><h4>Smazat</h4></a></div>
+    </div>
+    <hr><br>
+<?php endforeach; endif ?>
+<!-- dopsat ELSE, když v DB nic nebude vypíše se "žádné záznamy" -->
+</div>

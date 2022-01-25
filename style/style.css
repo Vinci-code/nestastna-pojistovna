@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Vujahday+Script&display=swap');
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+}
+h2 {
+    font-family: 'Vujahday Script', cursive;
+    font-size: 2em;
+    text-align: center;
+    color: rgb(19, 37, 10);
+}
+h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 26px;
+}
+.hlavicka {
+    background-image: linear-gradient(to right, #011307 0%, #e3f0dfaf 100%);
+    clip-path: polygon(0 0px, 0 100%, 93% 100%, 100% 0);
+    height: auto;
+    padding-top: 1em;
+    margin: 10px 20px;    
+}
+body {
+    background-image: linear-gradient(to right, #011307d2 0%, #e3f0df8d 100%), url("../img/pozadi.jpg");
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:active,
+a:hover {
+    color: rgb(33, 173, 8);;
+}
+nav.menu
+{
+    background: rgba(68, 68, 68, 0);
+    display: block;
+    width: auto;
+    font-size: 16px;
+    line-height: 2em;
+    padding: 0 15px;
+}
+nav.menu ul li {
+    width: auto;
+    background-image: linear-gradient(to right, rgba(56, 109, 7, 0.691), rgba(26, 24, 24, 0.26));
+    display: block;
+    text-align: center;
+    padding: 2px 5px;
+    border-radius: 10px;
+}
+
+nav.menu a:hover
+{
+    background: rgba(0, 0, 0, 0.1);
+    color: rgb(159, 243, 138);
+}
+img {
+    max-width: 80%;
+    height: auto;
+    
+}
+.img {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+main {
+    min-height: 60vh;
+}
+/* -------------------- END NAV MENU-----------------------------  */
+
+form{
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+select{
+    margin: 20px auto;
+    height: 1.8em;
+    color: #000;
+}
+input{
+    
+    margin: 0 auto;      
+}
+input[type="submit"] {
+    background-image: linear-gradient(to right, #141314d8 0%, #2731429f 100%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 0px;
+}
+
+input[type="submit"]:hover {
+    background: #000000;
+    color: #EEEEEE;
+    cursor: pointer;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="password"] {
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+    padding: 0.3em;
+    display: block;
+    text-align: center;
+    color: #111;
+}
+
+input[type="submit"] {
+    padding: 10px 25px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    font-size: 1.7em;
+    margin: 15px auto;
+    border-radius: 5px;
+    border: 1px solid #aaaaaa;
+    width: 80%;
+    height: 190px;
+    color: #111;
+}
+/* ------------------ KONEC INPUT ---------------------------------  */
+footer{
+    background-image: linear-gradient(to right, #000000e7 0%, #3f4246d2 100%);
+    clip-path: polygon(0 30px, 100% 0, 100% 100%, 0 100%);
+    height: 4em;
+    color: rgb(148, 243, 148);
+    margin: 0;
+    padding-top: 45px;
+    text-align: center;
+}
+
+.zprava{
+    color: #000;
+    background: rgb(124, 161, 13);
+    text-align: center;
+}
+
+.info{
+    background-color: rgb(243, 23, 23);
+    color: #111;
+    padding: 1px 20px;
+    text-align: center;
+}
+.emailUzivatele {
+    display: block;
+    color: rgb(33, 173, 8);
+    margin: 30px 0 0 10px;
+    text-align: left;
+}
+.ramecek {
+    border: 2px solid #111;
+    background-image: linear-gradient(to right, #51535293 0%, #464b4b75 50%);
+    border-radius: 7px;
+    padding: 5px 8px;
+}
+img {
+    text-align: center;
+}
+.tlacitko {
+    color: rgb(171, 248, 126);
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 3px 18px;
+}
+.container{
+    background-image: linear-gradient(to right, #b1bcbdab 0%, #687c8160 100%);
+    width: 90vw;
+    margin: 0 auto;
+    padding: 10px 10px 30px 10px;
+    border-radius: 10px;
+
+}
+
+.doPrava {
+    float: right;
+}
+.hneda {
+    /* border: 1px solid #444; */
+    border-radius: 6px;
+    padding: 3px 0 3px 8px;
+    background-image: linear-gradient(to right, rgba(206, 112, 6, 0.897), rgba(0,0,0,0.1));
+}
+.cervena {
+    /* border: 1px solid #444; */
+    border-radius: 6px;
+    padding: 4px 0 4px 8px;
+    background-image: linear-gradient(to right, rgba(197, 37, 37, 0.76), rgba(0,0,0,0.1));
+}
+.seda {
+    border-radius: 6px;
+    padding: 4px 0 34px 8px;
+    background-image: linear-gradient(to right, rgba(190, 190, 185, 0.76), rgba(0,0,0,0.1));
+}
+.vypis > .col {
+    margin-left: 0;
+}
+/*-------------------  media queries --------------------*/
+
+@media screen and (min-width: 480px)
+{
+    ul
+    {
+        list-style-type: none;
+    }
+    nav.menu ul li a
+    {
+        color: rgb(66, 197, 73);
+        text-decoration: none;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        line-height: 2em;
+        padding: 0 15px;
+        position: relative;
+        text-align: center;
+
+    }
+    nav.menu ul li {
+    width: auto;
+    background: rgba(46, 49, 65, 0.904);
+    display: inline-block;
+    border-radius: 10px;
+    margin-bottom: 7px;
+    }
+
+    nav.menu ul {
+        width: 100%;
+        text-align: left;
+    }
+    .hlavicka {
+        height: auto;
+    }
+    
+    h1 {
+        font-size: 2.3em;
+    }
+}

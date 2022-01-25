@@ -1,0 +1,39 @@
+<div class="container">
+    <a class="tlacitko" href="uvod-administrace">zpět</a>
+    <br>
+    <h2>Výpis všech uživatelů</h2>
+    <?php if(!$vypisUzivatele): ?>
+        <h3>žádní uživatelé </h3>
+    <?php endif ?>
+    <br>
+    <div class="row">
+        <div class="col span-1-of-10"><b>id</b></div>
+        <div class="col span-2-of-10"><b>přezdívka</b></div>
+        <div class="col span-3-of-10"><b>email</b></div>
+        <div class="col span-2-of-10"></div>
+        <div class="col span-2-of-10"></div>
+    </div>
+    <br>
+    <?php if(isset($vypisUzivatele)): ?>
+        <?php foreach($vypisUzivatele as $uzivatel): ?>
+            <div class="row">
+                <div class="col span-1-of-10">
+                    <h6><?= $uzivatel['uzivatele_id'] ?></h6>
+                </div>
+                <div class="col span-2-of-10">
+                    <h6><?= $uzivatel['prezdivka'] ?></h6>
+                </div>
+                <div class="col span-3-of-10">
+                    <h6><?= $uzivatel['email'] ?></h6>
+                </div>
+                <div class="col span-2-of-10 hneda">
+                    <a href="administrace-uzivatelu/upravit/<?= $uzivatel['uzivatele_id'] ?>"><p>Uprav</p></a>
+                </div>
+                <div class="col span-2-of-10 cervena">
+                    <a href="administrace-uzivatelu/smazat/<?= $uzivatel['uzivatele_id'] ?>"><p>Smaž</p></a>
+                </div>
+                <hr><br>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>

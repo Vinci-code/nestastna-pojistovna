@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="cs-cz">
+    <head>
+        <base href="http://test.vinci-code.eu" />
+        <meta charset="UTF-8" />
+        <title><?= $titulek ?></title>
+        <meta name="description" content="<?= $popis ?>" />
+        <meta name="keywords" content="<?= $klicova_slova ?>" />
+        <link rel="stylesheet" href="../style/style.css" type="text/css"/>
+        <meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+        <meta name="author" content="Lukáš Vincent Doležal" />
+        <link rel="stylesheet" href="../style/grid.css" type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,500&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="hlavicka">
+                <h1>Pojištění Doslova <small>s.r.o.</small></h1>
+                <?php  if((isset($_SESSION["prezdivka"])) && (isset($_SESSION["email"]))): ?>
+                <a href="nastaveni-profilu"><p class="emailUzivatele"><?= $_SESSION["email"]; ?></p></a>
+                
+                        
+                 <?php endif; ?>
+            </div>
+                        
+            <nav class="menu">
+                <ul>
+                    <li><a href="uvod">Úvod</a></li>
+                    <li><a href="nabidka">Nabídka pojištění</a></li>
+                    <li><a href="kontakt">Kontakt</a></li>
+
+                    <?php if((isset($_SESSION["prezdivka"])) && (isset($_SESSION["email"]))): ?>
+                    <li><a href="pojisteni">Mé pojištění</a></li>
+                    <?php endif; ?>
+
+                    <?php if(isset($_SESSION['admin1984']) && ($_SESSION['admin1984'] === 1)): ?><li><a href="uvod-administrace">Administrace</a></li><?php endif; ?>
+                    
+                    <div class="doPrava">    
+                        
+                        <?php if((!isset($_SESSION["prezdivka"])) && (!isset($_SESSION["email"]))): ?>
+
+                        <li><a href='registrovat'>Registrace</a></li>
+                        <li><a class="jmenoLogin" href='prihlaseni'>Přihlásit</a></li>
+                        
+                        <?php endif; ?>
+                        
+                        <?php  if((isset($_SESSION["prezdivka"])) && (isset($_SESSION["email"]))): ?>
+                        
+                        <li><a href='odhlaseni'>Odhlásit</a></li>
+                        <?php endif; ?>
+                        
+                    </div>    
+                </ul>
+            </nav>
+            
+        </header>
+        <main>
+            <br clear="both" />    
+        
+            <script src="../script/soubor.js"></script>
+
+
+            <?php if(isset($zprava_info)): ?>
+                    <h3 class="info"><?= $zprava_info ?></h3>
+            <?php endif ?>
+            
+            <?php foreach ($zpravy as $zprava) : ?>
+                <h3 class="zprava"><?= $zprava ?></h3>
+            <?php endforeach ?>
+            
+            <div class="vlozenyPohled">
+                <?php $this->kontroler->vypisPohled(); ?>
+            </div>
+                
+        </main>
+        <br>
+         <footer>
+            <h4>Vinc & ITnetwork</h4>
+        </footer>
+    </body>
+</html>

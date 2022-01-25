@@ -1,0 +1,33 @@
+
+<?php if(isset($zprava_info)): ?>
+<h3 class="info"><?= $zprava_info ?></h3>
+<?php endif ?>
+<a class="tlacitko" href="pojisteni">zpět</a>
+    <h2>Nové pojištění</h2>
+    <br>
+    <form method="post">
+        <div class="row">
+            <label>Druh Automobilu</label>
+            <select name="druh-auta">
+                <option value="osobní">osobní</option>
+                <option value="nákladní">nákladní</option>
+                <option value="užitkový">užitkový</option>
+            </select><br>
+        
+            <label>cena auta v kč</label>
+            <input type="number" name="cena-auta"><br>
+
+            <label>Délka pojištění</label>
+            <select name="delka-pojisteni">
+                <option value="1 rok">1 rok</option>
+                <option value="2 roky">2 roky</option>
+                <option value="3 roky">3 roky</option>
+                <option value="4 roky">4 roky</option>
+                <option value="5 let">5 let</option>
+            </select><br>
+            <label>značka a typ automobilu</label>
+            <input type="text" name="typ-druh" placeholder="např. škoda Octavia 2014" ><br>
+        </div>
+        <input type="submit" name="vytvorit" value="vytvořit">
+    </form>
+</div>

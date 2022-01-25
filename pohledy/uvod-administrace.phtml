@@ -1,0 +1,65 @@
+<h2>Administrace</h2>
+
+<div class="container">
+
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="Uvod-Administrace/vypis-uzivatelu">uživatele</a>
+            </li>
+            <li>
+                <a href="Uvod-Administrace/vypis-pojisteni">pojištění</a>
+            </li>
+            <li>
+                <a href="Uvod-Administrace/vypis-pojistenych-uzivatelu">pojištění uživatelé</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <h3>V databázi uloženo</h3>
+    <br>
+    <h4><?= $pocetUzivatelu ?> uživatelů.</h4>
+    <h4><?= $pocetPojisteni ?> pojištění.</h4>
+    <h4><?= $pocetPojUdalosti ?> pojistných událostí.</h4>
+    <h4>měsíční příjem ze splátek: <?= $mesicniSplatky ?> kč.</h4>
+    <h4>vyplacené pojistné klientům: 0 kč.</h4>
+    <br>
+</div>
+
+ <!-- <?php var_dump($mesicniSplatky) ?> -->
+<!-- // $LoginSuccessful = false;
+ 
+// // kontrola vyplnění údajů klientem
+// if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW'])) {
+    
+//     $Username = $_SERVER['PHP_AUTH_USER'];
+//     $Password = $_SERVER['PHP_AUTH_PW'];
+    
+//     // kontrola správnosti přihlašovacích údajů
+//     if ($Username == 'Vincent' && $Password == '123') {
+//         $LoginSuccessful = true;
+//     }
+// }
+ 
+// // je všechno správně?
+// if (!$LoginSuccessful) {
+    
+//     // při prvním přístupu se uživateli zobazí nabídka s textem `Zadej login a heslo: `
+//     header('WWW-Authenticate: Basic realm="Zadej login a heslo: "');
+//     header('HTTP/1.0 401 Unauthorized');
+
+//     // při nesprávných údajích (většinou po třech pokusech) se uživatel dostane sem
+ 
+//     echo 'Přihlášení nebylo úspěšné :-(';
+ 
+// } else {
+//     // při správných údajích se uživatel dostane sem
+//     echo 'Tajná stránka!';
+<h1>narodil jsi se 17.03.1984 </h1>
+//<h1>
+//<?php
+//$ted = new DateTime();
+//$narozeniny = new DateTime('1984-03-17');
+//$interval = $narozeniny->diff($ted);
+//echo($interval->format('takže je tvůj Věk: %y let %m mesicu %d dní'));
+// } -->
