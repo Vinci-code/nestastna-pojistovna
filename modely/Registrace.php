@@ -23,7 +23,7 @@ class Registrace extends SpravceUzivatelu
         try
         {
             $this->emptyInputReg();
-            $this->existujeUzivatel();
+            // $this->existujeUzivatel();
             $this->validniEmail();
             $this->porovnejHesla();
         }
